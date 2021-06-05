@@ -9,6 +9,7 @@ const bot = new Client({
 bot.token = require('./config.json');  //importing token from config.json
 bot.prefix = 'k!'; //declaring bot's prefix
 bot.commands = new Collection();  //basically this is a Linked-list/Vector/Set
+bot.slash = new Collection(); //same as above but for slash commands
 
 ['commands', 'interactions'].forEach( (x) /*local variable*/ => { //so forEach loop is used for array elements, as the name suggests, it will perform a function in the () for each of the elements of the array
   require(`./handlers/${x}`)(bot); //passing the bot thingy
