@@ -127,7 +127,7 @@ There are multiple ways for you to host a Discord Bot 24/7.<br> Here is a few wa
 <br />
 
 ```
-2. Why wont my bot log on?
+2. Why wont my bot log in?
 ```
 There are multiple reasons your bot could not log on. Even really simple ones. Here is a list of the most common ones:
 
