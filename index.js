@@ -19,5 +19,11 @@ bot.on('ready', () =>{  //this is a 'ready' event recieved when you have logged 
   bot.user.setActivity('a shoutout to all copy pasta out thereeeeeeeeeeeee'); //setting the status or activity to this string
   console.log('the bot is online'); //to show that the bot is online you will get this in your console
 });
-
+/*-------------EVENT LISTENERS------------------*/
+bot.on('message', async(message)=>{ //to hear for MESSAGE_CREATE event
+  if (!message.guild) return; //if message is not in a guild (server) return
+  if (!message.content.toLowerCase().startsWith(bot.prefix)) return; //if message's content (in lowercase) doesn't start with the bot's prefix, return
+  require('./events/message')(bot, message);
+});
+/*------------END OF LISTENERS-----------------*/
 bot.login(bot.token); //logging into the bot
